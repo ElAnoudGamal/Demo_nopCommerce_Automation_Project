@@ -14,6 +14,11 @@ public class P03_homePage {
        return Hooks.driver.findElement(By.xpath("//select//option[@value=\"https://demo.nopcommerce.com/changecurrency/6?returnUrl=%2F\"]"));
     }
 
+    public List<WebElement> productCurrency()
+    {
+       return Hooks.driver.findElements(By.cssSelector("span[class=\"price actual-price\"]"));
+    }
+
     //D04_searchStepDef
     public By namePOM()
     {

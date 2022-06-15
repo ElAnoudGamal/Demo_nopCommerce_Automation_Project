@@ -19,5 +19,8 @@ public class D03_currenciesStepDef {
     public void euroCurrencyDisplayed()
     {
         Assert.assertTrue(homePage.euroCurrency().isDisplayed());
+        String actualResult = homePage.productCurrency().get(0).getText();
+        System.out.println("Actual Result:" + actualResult);
+        Assert.assertTrue(actualResult.contains("€"));
     }
 }
